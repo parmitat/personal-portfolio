@@ -1,4 +1,4 @@
-import emailjs from '@emailjs/browser';
+// import emailjs from '@emailjs/browser';
 import { useState } from 'react';
 export const Contact = () => {
 
@@ -8,22 +8,25 @@ export const Contact = () => {
         message: "" 
     })
 
-   
     const handleSubmit = (e) => {
         e.preventDefault();
-
-       emailjs.sendForm(import.meta.env.VITE_SERVICE_ID, 
-        import.meta.env.VITE_TEMPLATE_ID, e.target,
-        import.meta.env.VITE_PUBLIC_KEY ).then((result) =>{
-    alert("Message sent successfully!");
-    setFormData({
-        name: "",
-        email: "",
-        message: ""
-
-       })
-    })
-       .catch(() => alert("oops! something went wrong.try again.")); 
+        // emailjs.sendForm(import.meta.env.VITE_SERVICE_ID, 
+        //  import.meta.env.VITE_TEMPLATE_ID, e.target,
+        //  import.meta.env.VITE_PUBLIC_KEY ).then((result) =>{
+        //     alert("Message sent successfully!");
+        //     setFormData({
+        //         name: "",
+        //         email: "",
+        //         message: ""
+        //     })
+        // })
+        // .catch(() => alert("oops! something went wrong.try again.")); 
+        alert("Contact form is currently unavailable. Please email me directly!");
+        setFormData({
+            name: "",
+            email: "",
+            message: ""
+        });
     };
 
 return(
